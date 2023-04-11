@@ -1,0 +1,42 @@
+@use "../foundation/setting" as *;
+@use "../foundation/mixin" as *;
+
+.p-section__ttl {
+	font-size: 3.2rem;
+	font-weight: $bold;
+	@include mq(m) {
+		font-size: 2.5rem;
+	}
+	&.c-size--middle {
+		font-size: 3rem;
+		font-weight: $demibold;
+		@include mq(m) {
+			font-size: 1.8rem;
+		}
+	}
+	.c-en {
+		font-size: 1.4rem;
+		text-transform: uppercase;
+		font-weight: normal;
+		display: block;
+		margin-top: 1rem;
+		@include mq(m) {
+			font-size: 1.4rem;
+		}
+	}
+}
+.c-shuei {
+	font-family: "dnp-shuei-shogomincho-std", sans-serif;
+	font-weight: $bold;
+	font-style: normal;
+}
+.c-en {
+	font-family: $en;
+}
+
+.c-txtcolor--white {
+	color: #fff;
+}
+.c-txtshadow {
+	text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,150 @@
+@use "../foundation/setting" as *;
+@use "../foundation/mixin" as *;
+.l-footer {
+	background-color: #232215;
+	color: #fff;
+	background-image: url(#{$imgPath}common/bg_footer.png);
+	background-size: 63rem auto;
+	background-repeat: no-repeat;
+	background-position: top -12rem left calc(50% + 55rem);
+	position: relative;
+	@include mq(m) {
+		background-size: 48rem auto;
+		background-position: top 11rem left 3rem;
+	}
+}
+.l-footer__inner {
+	padding: 6rem 1.5rem 1rem;
+	width: $base-width;
+	margin: 0 auto;
+	box-sizing: content-box;
+	@include mq(m) {
+		width: auto;
+		padding: 4.3rem 3rem 1.5rem;
+	}
+}
+.l-footer__content {
+	display: grid;
+	grid-auto-columns: 1fr;
+	grid-auto-rows: 1fr;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto auto;
+	gap: 0px 0px;
+	grid-template-areas:
+		"logo-add nav"
+		"line nav";
+	padding-bottom: 11rem;
+	@include mq(m) {
+		display: block;
+		padding-bottom: 3rem;
+	}
+}
+// ロゴと住所
+.l-footer__logo-add-content {
+	grid-area: logo-add;
+	@include mq(m) {
+		border-bottom: 1px solid #9c9c9c;
+		padding-bottom: 2rem;
+	}
+}
+// 電話番号とFAX番号
+.l-footer__tel-fax-wrapper {
+	@include mq(m) {
+		display: flex;
+		.c-tel {
+			padding-right: 1em;
+			&::after {
+				position: relative;
+				right: -0.5em;
+				content: "/";
+			}
+		}
+	}
+}
+// ロゴ
+.l-footer__logo {
+	width: 18.7rem;
+	@include mq(m) {
+		width: 16.5rem;
+	}
+}
+// 住所
+.l-footer__add {
+	margin-top: 1.8rem;
+}
+.l-footer__txt {
+	font-size: 1.3rem;
+	a {
+		color: currentColor;
+		text-decoration: none;
+	}
+}
+// LINE
+.l-footer__line {
+	grid-area: line;
+	margin-top: 1rem;
+	width: 13.2rem;
+	@include mq(m) {
+		margin-top: 9rem;
+		width: 15.1rem;
+	}
+	a {
+		@include hover;
+	}
+}
+// フッターナビゲーション
+.l-footer__nav-content {
+	grid-area: nav;
+	margin-left: 11rem;
+	padding-top: 2rem;
+	@include mq(m) {
+		padding-top: 1rem;
+		margin-left: 0;
+	}
+}
+.l-footer__nav {
+	display: flex;
+}
+.l-footer__nav-list {
+	margin-left: 7rem;
+	@include mq(m) {
+		margin-left: 0;
+		width: 50%;
+	}
+	&.c-second-nav {
+		@include mq(m) {
+			margin-left: 1em;
+		}
+	}
+}
+.l-footer__nav-item:nth-of-type(n + 2) {
+	margin-top: 1.8rem;
+	@include mq(m) {
+		margin-top: 0;
+	}
+}
+// フッターリンク
+.l-footer__nav-link {
+	text-decoration: none;
+	position: relative;
+	color: currentColor;
+	font-size: 1.5rem;
+	display: inline-block;
+	@include hover;
+	@include mq(m) {
+		display: block;
+		padding: 1.7rem 0;
+		font-size: 1.4rem;
+		letter-spacing: normal;
+	}
+}
+// コピーライト
+.c-copyright {
+	font-size: 1rem;
+	text-align: center;
+	font-family: $en;
+	@include mq(m) {
+		letter-spacing: 0.1em;
+		text-align: left;
+	}
+}

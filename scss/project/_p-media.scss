@@ -1,0 +1,130 @@
+@use "../foundation/setting" as *;
+@use "../foundation/mixin" as *;
+.p-media {
+	display: flex;
+	@include mq(m) {
+		display: block;
+	}
+	.p-media__img-wrapper {
+		width: 50.4rem;
+		flex-shrink: 0;
+		@include mq(m) {
+			width: auto;
+		}
+	}
+	.p-media__txt-wrapper {
+		padding-top: 7rem;
+		margin-left: 5rem;
+		@include mq(m) {
+			padding-top: 3rem;
+			margin-left: 0;
+		}
+		.p-media__ttl {
+			font-size: 2.6rem;
+			font-weight: $demibold;
+			line-height: 1.8;
+			@include mq(m) {
+				font-size: 2rem;
+			}
+			+ .c-txt {
+				margin-top: 3rem;
+			}
+		}
+		.c-txt {
+			font-size: 1.5rem;
+			line-height: 2.2;
+			@include mq(m) {
+				letter-spacing: 0.03em;
+				font-size: 1.4rem;
+			}
+		}
+	}
+	&.p-reverse {
+		flex-direction: row-reverse;
+		.p-media__txt-wrapper {
+			margin-left: 0;
+			margin-right: 5rem;
+			@include mq(m) {
+				margin-right: 0;
+			}
+		}
+	}
+	+ .p-media {
+		margin-top: 7rem;
+		@include mq(m) {
+			margin-top: 9rem;
+		}
+	}
+}
+
+.p-media-grid {
+	display: grid;
+	grid-template-columns: pct(1080, 540) 1fr;
+	grid-template-rows: auto 1fr;
+	gap: 0px 0px;
+	grid-template-areas:
+		"img ttl"
+		"img txt";
+	@include mq(m) {
+		display: block;
+	}
+	&.p-reverse {
+		grid-template-columns: 1fr pct(1080, 540);
+		grid-template-areas:
+			"ttl img"
+			"txt img";
+		.p-media__img-wrapper {
+			margin-right: 0;
+			margin-left: 4.8rem;
+			@include mq(m) {
+				margin-left: 0;
+			}
+		}
+	}
+	.p-media__img-wrapper {
+		grid-area: img;
+		margin-right: 4.8rem;
+		@include mq(m) {
+			margin: 2.5rem 0 0;
+		}
+	}
+	.p-media__ttl {
+		grid-area: ttl;
+		font-size: 2.6rem;
+		font-weight: $demibold;
+		line-height: 1.8;
+		padding-top: 6rem;
+		&.u-pt {
+			padding-top: 3rem;
+		}
+		@include mq(m) {
+			font-size: 2.3rem;
+		}
+		+ .c-txt {
+			margin-top: 3rem;
+		}
+	}
+	.c-txt {
+		grid-area: txt;
+		font-size: 1.5rem;
+		line-height: 2.2;
+		margin-top: 3rem;
+		@include mq(m) {
+			margin-top: 2rem;
+		}
+		&.u-pc-mt_1 {
+			@include mq(pc) {
+				margin-top: 1rem;
+			}
+		}
+		&.u-pc-mt_5 {
+			@include mq(pc) {
+				margin-top: 5rem;
+			}
+		}
+		@include mq(m) {
+			letter-spacing: 0.03em;
+			font-size: 1.4rem;
+		}
+	}
+}

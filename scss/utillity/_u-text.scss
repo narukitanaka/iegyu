@@ -1,0 +1,42 @@
+@use "../foundation/setting" as *;
+@use "../foundation/mixin" as *;
+
+.u-pc {
+	display: block;
+	@include mq(m) {
+		display: none;
+	}
+}
+.u-pc-inlineblock {
+	display: inline-block;
+	@include mq(m) {
+		display: none;
+	}
+}
+.u-sp {
+	display: none;
+	@include mq(m) {
+		display: block;
+	}
+}
+.u-sp-inlineblock {
+	display: none;
+	@include mq(m) {
+		display: inline-block;
+	}
+}
+.u-sp-inline {
+	display: none;
+	@include mq(m) {
+		display: inline;
+	}
+}
+.u-align--center {
+	text-align: center;
+}
+
+.u-pc-align--center {
+	@include mq(pc) {
+		text-align: center;
+	}
+}

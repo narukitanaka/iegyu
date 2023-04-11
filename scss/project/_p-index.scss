@@ -1,0 +1,446 @@
+@use "../foundation/setting" as *;
+@use "../foundation/mixin" as *;
+/* ----------------------------------------------------------------------------------------------------
+*	MV
+* --------------------------------------------------------------------------------------------------*/
+.p-top-mv {
+	position: relative;
+	height: 100vh;
+	.swiper {
+		height: 100%;
+	}
+	.swiper-container {
+		width: auto;
+		height: auto;
+	}
+	.swiper-slide {
+		height: 100%;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	.c-txt {
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		display: grid;
+		place-content: center;
+		z-index: 5;
+		top: 0;
+		left: 0;
+		right: 0;
+		pointer-events: none;
+		img {
+			filter: drop-shadow(0px 0px 9px rgba(0, 0, 0, 1));
+		}
+		@include mq(m) {
+			padding-top: 2rem;
+			img {
+				width: 7.5rem;
+			}
+		}
+	}
+}
+.p-smoke {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -3px;
+	width: 100%;
+	z-index: 10;
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+/* ----------------------------------------------------------------------------------------------------
+*	
+* --------------------------------------------------------------------------------------------------*/
+.p-top-greeting {
+	padding: 12.3rem 0 17rem;
+	background: url(#{$imgPath}top/bg_greeting.jpg) #fff no-repeat top center/ 100% auto;
+	@include mq(m) {
+		background-image: url(#{$imgPath}common/bg_menu.png), url(#{$imgPath}top/bg_greeting.jpg);
+		background-repeat: no-repeat;
+		background-size: 33rem auto, 213% auto;
+		background-position: top left calc(50% - 8rem), bottom 26rem center;
+		padding: 10rem 0;
+	}
+}
+.p-top-greeting-wrapper {
+	display: flex;
+	justify-content: center;
+}
+.p-top-greeting-content {
+	writing-mode: vertical-rl;
+	margin: 0 auto;
+	height: 82rem;
+	@include mq(m) {
+		height: auto;
+		writing-mode: horizontal-tb;
+	}
+	.p-section__ttl {
+		line-height: 1.7;
+		margin-left: 4rem;
+		@include mq(m) {
+			margin-left: 0;
+			text-align: center;
+		}
+	}
+	.c-txt {
+		font-size: 1.6rem;
+		line-height: 2.5;
+		letter-spacing: 0.2em;
+		@include mq(m) {
+			margin-top: 2rem;
+			font-size: 1.4rem;
+			line-height: 2.1;
+			letter-spacing: 0.05em;
+		}
+	}
+}
+.p-movie-wrapper {
+	width: 53.7rem;
+	margin: 0 auto;
+	@include mq(m) {
+		width: auto;
+		margin-top: 24em;
+	}
+}
+.p-movie__ttl {
+	font-size: 2rem;
+	text-align: center;
+	font-weight: normal;
+	@include mq(m) {
+		font-size: 1.6rem;
+	}
+}
+.p-movie-content {
+	margin-top: 1.5rem;
+	aspect-ratio: 537/302;
+	iframe {
+		width: 100%;
+		height: 100%;
+	}
+}
+/* ----------------------------------------------------------------------------------------------------
+*	『幻の牛』伊江牛
+* --------------------------------------------------------------------------------------------------*/
+.p-top-brand {
+	padding: 4.5rem 0 4.9rem;
+	background: url(#{$imgPath}top/bg_brand.jpg) no-repeat center center/cover;
+	@include mq(m) {
+		background-image: url(#{$imgPath}top/bg_sp-brand.jpg);
+		padding: 3rem 0 4rem;
+	}
+}
+.p-top-brand-content {
+	color: #fff;
+	display: flex;
+	padding: 0 4rem;
+	@include mq(m) {
+		padding: 0;
+		display: block;
+	}
+	.p-section__ttl {
+		writing-mode: vertical-lr;
+		font-size: 5.8rem;
+		@include mq(m) {
+			font-size: 3.6rem;
+		}
+		.c-jp {
+			margin-top: -0.5em;
+			margin-bottom: -0.5em;
+		}
+		.c-en {
+			font-size: 1.4rem;
+			margin-left: 1rem;
+			@include mq(m) {
+				font-size: 1.2rem;
+			}
+		}
+	}
+	.p-txt-link-wrapper {
+		width: 57%;
+		display: flex;
+		flex-direction: column;
+		margin-left: 1.2rem;
+		@include mq(m) {
+			margin-top: 2rem;
+			width: auto;
+			display: block;
+			margin-left: 0;
+		}
+		.c-txt {
+			margin-top: auto;
+			font-size: 1.5rem;
+			letter-spacing: 0.1em;
+			font-weight: $demibold;
+			@include mq(m) {
+				font-size: 1.4rem;
+				text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.8);
+				line-height: 2;
+				letter-spacing: 0.05em;
+			}
+		}
+	}
+	.p-link-wrapper {
+		margin-top: 2.5rem;
+		text-align: right;
+		@include mq(m) {
+			text-align: left;
+		}
+		.c-link {
+			@include mq(m) {
+				text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.8);
+			}
+		}
+		svg {
+			@include mq(m) {
+				filter: drop-shadow(0px 0px 9px rgba(0, 0, 0, 0.8));
+			}
+		}
+	}
+}
+/* ----------------------------------------------------------------------------------------------------
+*	一流の加工技術
+* --------------------------------------------------------------------------------------------------*/
+.p-top-quarity {
+	padding: 4.9rem 0;
+	color: #fff;
+	background: url(#{$imgPath}top/bg_quarity.jpg) no-repeat center center/cover;
+	@include mq(m) {
+		background-image: url(#{$imgPath}top/bg_sp-quarity.jpg);
+		padding: 3rem 0 4rem;
+	}
+}
+.p-top-quarity-content {
+	display: flex;
+	flex-direction: row-reverse;
+	@include mq(m) {
+		display: block;
+	}
+	.p-section__ttl {
+		writing-mode: vertical-lr;
+		font-size: 5.8rem;
+		@include mq(m) {
+			font-size: 3.6rem;
+			margin-left: auto;
+		}
+		.c-en {
+			font-size: 1.4rem;
+			margin-right: 1rem;
+			@include mq(m) {
+				font-size: 1.2rem;
+			}
+		}
+	}
+	.p-txt-link-wrapper {
+		width: pct(1080, 491);
+		display: flex;
+		flex-direction: column;
+		margin-right: 0.8rem;
+		margin-left: auto;
+		@include mq(m) {
+			width: auto;
+			display: block;
+			margin-left: 0;
+			margin-right: 0;
+			margin-top: 4rem;
+		}
+	}
+	.c-txt {
+		margin-top: auto;
+		font-size: 1.5rem;
+		letter-spacing: 0.1em;
+		font-weight: $demibold;
+		@include mq(m) {
+			font-size: 1.4rem;
+			text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.8);
+			line-height: 2;
+			letter-spacing: 0.05em;
+		}
+	}
+	.p-link-wrapper {
+		margin-top: 2rem;
+		.c-link {
+			@include mq(m) {
+				text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.8);
+			}
+		}
+		svg {
+			@include mq(m) {
+				filter: drop-shadow(0px 0px 9px rgba(0, 0, 0, 0.8));
+			}
+		}
+	}
+}
+/* ----------------------------------------------------------------------------------------------------
+*	商品一覧
+* --------------------------------------------------------------------------------------------------*/
+.p-top-product {
+	padding-top: 10rem;
+	@include mq(m) {
+		padding-top: 15rem;
+	}
+}
+.p-top-product-content {
+	background: url(#{$imgPath}top/bg_products.jpg) no-repeat center center/cover;
+	padding: 5rem;
+	justify-content: center;
+	@include mq(m) {
+		background-image: url(#{$imgPath}top/bg_sp-products.jpg);
+		padding: 5rem 2rem;
+	}
+	.p-section__ttl {
+		width: pct(980, 213);
+		flex-shrink: 0;
+		@include mq(m) {
+			width: auto;
+		}
+	}
+	.p-txt-wrapper {
+		width: pct(980, 450);
+		@include mq(m) {
+			width: auto;
+			margin-top: 4rem;
+		}
+		.c-txt {
+			@include mq(m) {
+				letter-spacing: 0.05em;
+			}
+		}
+	}
+	.p-link-wrapper {
+		margin-top: 1rem;
+		@include mq(m) {
+			margin-top: 4rem;
+		}
+	}
+}
+/* ----------------------------------------------------------------------------------------------------
+*	私たちについて
+* --------------------------------------------------------------------------------------------------*/
+.p-top-about {
+	padding: 13rem 0 14rem;
+	background: url(../img/common/bg_menu.png) no-repeat bottom 1.5rem left calc(50% - 43rem) / 54.8rem auto;
+	overflow: hidden;
+	@include mq(m) {
+		padding: 15rem 0 18rem;
+		background-size: 31rem auto;
+		background-position: bottom right calc(50% - 10rem);
+	}
+}
+.p-top-about-content {
+	position: relative;
+	min-height: 70.2rem;
+	@include mq(m) {
+		min-height: inherit;
+	}
+	.p-txt-wrapper {
+		padding-top: 14rem;
+		width: 26%;
+		@include mq(m) {
+			padding-top: 0;
+			width: auto;
+		}
+	}
+	.c-txt {
+		margin-top: 4rem;
+		font-size: 1.5rem;
+		font-weight: $demibold;
+		text-align: justify;
+		letter-spacing: 0.08em;
+		@include mq(m) {
+			margin-top: 2rem;
+			font-size: 1.4rem;
+			letter-spacing: 0.06em;
+			line-height: 2.2;
+		}
+	}
+	.p-img-wrapper {
+		position: absolute;
+		top: 0;
+		left: 26%;
+		width: 110rem;
+		@include mq(m) {
+			margin-top: 3rem;
+			position: static;
+			left: 0;
+			width: auto;
+			img {
+				filter: drop-shadow(0px 0px 9px rgba(0, 0, 0, 0.4));
+			}
+		}
+	}
+	.p-link-wrapper {
+		margin-top: 4rem;
+		@include mq(m) {
+			margin-top: 3rem;
+		}
+	}
+}
+/* ----------------------------------------------------------------------------------------------------
+*	お知らせ
+* --------------------------------------------------------------------------------------------------*/
+.p-top-news {
+	padding: 6rem 0 14rem;
+	.p-cards {
+		margin-top: 1.8rem;
+	}
+	.p-link-wrapper {
+		margin-top: 5rem;
+		@include mq(m) {
+			margin-top: 3rem;
+		}
+	}
+}
+
+/* ----------------------------------------------------------------------------------------------------
+*	ギフトにおすすめ
+* --------------------------------------------------------------------------------------------------*/
+.p-top-gift {
+	background: url(#{$imgPath}top/bg_gift.jpg) no-repeat center center/cover;
+	@include mq(m) {
+		background-image: url(#{$imgPath}top/bg_sp-gift.jpg);
+	}
+	.p-section__ttl {
+		font-size: 3.7rem;
+		@include mq(m) {
+			font-size: 2.5rem;
+			text-align: center;
+		}
+	}
+	.p-cards--row {
+		.p-link-wrapper {
+			margin-top: 5.5rem;
+		}
+	}
+}
+/* ----------------------------------------------------------------------------------------------------
+*	直売店と販売点
+* --------------------------------------------------------------------------------------------------*/
+
+.p-top-shop {
+	background: url(#{$imgPath}top/bg_shop.jpg) no-repeat center center/cover;
+	margin-bottom: 11rem;
+	margin-top: 3.8rem;
+	@include mq(m) {
+		margin-top: 3rem;
+	}
+	.p-section__ttl {
+		font-size: 3.7rem;
+		@include mq(m) {
+			font-size: 2.5rem;
+		}
+	}
+	@include mq(m) {
+		margin-top: 3rem;
+		background-image: url(#{$imgPath}top/bg_sp-shop.jpg);
+		.p-section__ttl {
+			text-align: center;
+		}
+	}
+}
