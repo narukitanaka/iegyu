@@ -1094,7 +1094,7 @@ button.swiper-pagination-bullet {
 .l-footer {
   background-color: #232215;
   color: #fff;
-  background-image: url(../img/common/bg_footer.png);
+  background-image: url(img/common/bg_footer.png);
   background-size: 63rem auto;
   background-repeat: no-repeat;
   background-position: top -12rem left calc(50% + 55rem);
@@ -1286,7 +1286,7 @@ button.swiper-pagination-bullet {
   width: 100%;
   height: 100%;
   background-color: #fafafa;
-  background-image: url(../img/common/bg_menu.png);
+  background-image: url(img/common/bg_menu.png);
   background-size: 65.8rem auto;
   background-repeat: no-repeat;
   background-position: top 25.7rem left calc(50% - 45rem);
@@ -1955,11 +1955,11 @@ button.swiper-pagination-bullet {
 * --------------------------------------------------------------------------------------------------*/
 .p-top-greeting {
   padding: 12.3rem 0 17rem;
-  background: url(../img/top/bg_greeting.jpg) #fff no-repeat top center/100% auto;
+  background: url(img/top/bg_greeting.jpg) #fff no-repeat top center/100% auto;
 }
 @media screen and (max-width: 767.98px) {
   .p-top-greeting {
-    background-image: url(../img/common/bg_menu.png), url(../img/top/bg_greeting.jpg);
+    background-image: url(img/common/bg_menu.png), url(img/top/bg_greeting.jpg);
     background-repeat: no-repeat;
     background-size: 33rem auto, 213% auto;
     background-position: top left calc(50% - 8rem), bottom 26rem center;
@@ -2043,11 +2043,11 @@ button.swiper-pagination-bullet {
 * --------------------------------------------------------------------------------------------------*/
 .p-top-brand {
   padding: 4.5rem 0 4.9rem;
-  background: url(../img/top/bg_brand.jpg) no-repeat center center/cover;
+  background: url(img/top/bg_brand.jpg) no-repeat center center/cover;
 }
 @media screen and (max-width: 767.98px) {
   .p-top-brand {
-    background-image: url(../img/top/bg_sp-brand.jpg);
+    background-image: url(img/top/bg_sp-brand.jpg);
     padding: 3rem 0 4rem;
   }
 }
@@ -2139,11 +2139,11 @@ button.swiper-pagination-bullet {
 .p-top-quarity {
   padding: 4.9rem 0;
   color: #fff;
-  background: url(../img/top/bg_quarity.jpg) no-repeat center center/cover;
+  background: url(img/top/bg_quarity.jpg) no-repeat center center/cover;
 }
 @media screen and (max-width: 767.98px) {
   .p-top-quarity {
-    background-image: url(../img/top/bg_sp-quarity.jpg);
+    background-image: url(img/top/bg_sp-quarity.jpg);
     padding: 3rem 0 4rem;
   }
 }
@@ -2233,13 +2233,13 @@ button.swiper-pagination-bullet {
 }
 
 .p-top-product-content {
-  background: url(../img/top/bg_products.jpg) no-repeat center center/cover;
+  background: url(img/top/bg_products.jpg) no-repeat center center/cover;
   padding: 5rem;
   justify-content: center;
 }
 @media screen and (max-width: 767.98px) {
   .p-top-product-content {
-    background-image: url(../img/top/bg_sp-products.jpg);
+    background-image: url(img/top/bg_sp-products.jpg);
     padding: 5rem 2rem;
   }
 }
@@ -2373,11 +2373,11 @@ button.swiper-pagination-bullet {
 *	ギフトにおすすめ
 * --------------------------------------------------------------------------------------------------*/
 .p-top-gift {
-  background: url(../img/top/bg_gift.jpg) no-repeat center center/cover;
+  background: url(img/top/bg_gift.jpg) no-repeat center center/cover;
 }
 @media screen and (max-width: 767.98px) {
   .p-top-gift {
-    background-image: url(../img/top/bg_sp-gift.jpg);
+    background-image: url(img/top/bg_sp-gift.jpg);
   }
 }
 .p-top-gift .p-section__ttl {
@@ -2397,7 +2397,7 @@ button.swiper-pagination-bullet {
 *	直売店と販売点
 * --------------------------------------------------------------------------------------------------*/
 .p-top-shop {
-  background: url(../img/top/bg_shop.jpg) no-repeat center center/cover;
+  background: url(img/top/bg_shop.jpg) no-repeat center center/cover;
   margin-bottom: 11rem;
   margin-top: 3.8rem;
 }
@@ -2417,7 +2417,7 @@ button.swiper-pagination-bullet {
 @media screen and (max-width: 767.98px) {
   .p-top-shop {
     margin-top: 3rem;
-    background-image: url(../img/top/bg_sp-shop.jpg);
+    background-image: url(img/top/bg_sp-shop.jpg);
   }
   .p-top-shop .p-section__ttl {
     text-align: center;
@@ -2438,7 +2438,7 @@ button.swiper-pagination-bullet {
   }
 }
 .p-about .p-about-greeting {
-  background-image: url(../img/common/bg_menu.png), url(../img/about/bg_about-greeting.jpg);
+  background-image: url(img/common/bg_menu.png), url(img/about/bg_about-greeting.jpg);
   background-repeat: no-repeat, no-repeat;
   background-size: 82.8rem auto, 100% auto;
   background-position: top 4rem center, bottom center;
@@ -2447,7 +2447,7 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767.98px) {
   .p-about .p-about-greeting {
-    background-image: url(../img/common/bg_menu.png), url(../img/about/bg_sp-about-greeting.jpg);
+    background-image: url(img/common/bg_menu.png), url(img/about/bg_sp-about-greeting.jpg);
     padding: 4rem 0 17rem;
     background-size: 95% auto, 100% auto;
     background-position: top 8rem center, bottom center;
@@ -2619,46 +2619,46 @@ button.swiper-pagination-bullet {
 }
 
 #chikusan {
-  background: url(../img/about/ttl_chikusan.png) no-repeat top 8rem right calc(50% - 54rem)/32.6rem auto;
+  background: url(img/about/ttl_chikusan.png) no-repeat top 8rem right calc(50% - 54rem)/32.6rem auto;
 }
 @media screen and (max-width: 767.98px) {
   #chikusan {
-    background-image: url(../img/about/ttl_sp-chikusan.png);
+    background-image: url(img/about/ttl_sp-chikusan.png);
     background-size: 23rem auto;
     background-position: top 3rem right calc(50% - 10rem);
   }
 }
 
 #kakou {
-  background: url(../img/about/ttl_kakou.png) no-repeat top 17rem left calc(50% - 59rem)/30.6rem auto;
+  background: url(img/about/ttl_kakou.png) no-repeat top 17rem left calc(50% - 59rem)/30.6rem auto;
 }
 @media screen and (max-width: 767.98px) {
   #kakou {
-    background-image: url(../img/about/ttl_sp-kakou.png);
+    background-image: url(img/about/ttl_sp-kakou.png);
     background-size: 23rem auto;
     background-position: top 3rem right calc(50% - 10rem);
   }
 }
 
 #hanbai {
-  background: url(../img/about/ttl_hanbai.png) no-repeat top 3rem right calc(50% - 54rem)/32.6rem auto;
+  background: url(img/about/ttl_hanbai.png) no-repeat top 3rem right calc(50% - 54rem)/32.6rem auto;
 }
 @media screen and (max-width: 767.98px) {
   #hanbai {
-    background-image: url(../img/about/ttl_sp-hanbai.png);
+    background-image: url(img/about/ttl_sp-hanbai.png);
     background-size: 21rem auto;
     background-position: top 6rem right calc(50% - 10rem);
   }
 }
 
 #insyokuten {
-  background: url(../img/about/ttl_insyokuten.png) no-repeat top 5rem left calc(50% - 62rem)/26.6rem auto;
+  background: url(img/about/ttl_insyokuten.png) no-repeat top 5rem left calc(50% - 62rem)/26.6rem auto;
   padding-bottom: 3rem;
 }
 @media screen and (max-width: 767.98px) {
   #insyokuten {
     padding-bottom: 0;
-    background-image: url(../img/about/ttl_sp-insyokuten.png);
+    background-image: url(img/about/ttl_sp-insyokuten.png);
     background-size: 19rem auto;
     background-position: top 3rem right calc(50% - 12rem);
   }
