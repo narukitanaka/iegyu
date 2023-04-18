@@ -24,13 +24,18 @@
 @use "project/p-index" as *;
 @use "project/p-about" as *;
 @use "project/p-brand" as *;
+@use "project/p-shop" as *;
+@use "project/p-news-list" as *;
+@use "project/p-news" as *;
+@use "project/p-recruit" as *;
+@use "project/p-privacy" as *;
 
 // -----------------------------------------------------------------
 // Component
 // -----------------------------------------------------------------
 @use "component/c-btn" as *;
 @use "component/c-text" as *;
-
+@use "component/c-pagenate" as *;
 // -----------------------------------------------------------------
 // Utillity
 // -----------------------------------------------------------------

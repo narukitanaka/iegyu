@@ -181,6 +181,7 @@ a {
 
 .swiper-backface-hidden .swiper-slide {
   transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -602,7 +603,8 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-watch-progress .swiper-slide-visible .swiper-lazy-preloader, .swiper:not(.swiper-watch-progress) .swiper-lazy-preloader {
-  animation: swiper-preloader-spin 1s infinite linear;
+  -webkit-animation: swiper-preloader-spin 1s infinite linear;
+          animation: swiper-preloader-spin 1s infinite linear;
 }
 
 .swiper-lazy-preloader-white {
@@ -611,6 +613,15 @@ button.swiper-pagination-bullet {
 
 .swiper-lazy-preloader-black {
   --swiper-preloader-color:#000;
+}
+
+@-webkit-keyframes swiper-preloader-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes swiper-preloader-spin {
@@ -667,6 +678,7 @@ button.swiper-pagination-bullet {
 
 .swiper-cube .swiper-slide {
   pointer-events: none;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 1;
   visibility: hidden;
@@ -694,6 +706,7 @@ button.swiper-pagination-bullet {
 
 .swiper-cube .swiper-slide-shadow-bottom, .swiper-cube .swiper-slide-shadow-left, .swiper-cube .swiper-slide-shadow-right, .swiper-cube .swiper-slide-shadow-top {
   z-index: 0;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -724,6 +737,7 @@ button.swiper-pagination-bullet {
 
 .swiper-flip .swiper-slide {
   pointer-events: none;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 1;
 }
@@ -738,10 +752,12 @@ button.swiper-pagination-bullet {
 
 .swiper-flip .swiper-slide-shadow-bottom, .swiper-flip .swiper-slide-shadow-left, .swiper-flip .swiper-slide-shadow-right, .swiper-flip .swiper-slide-shadow-top {
   z-index: 0;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
 .swiper-creative .swiper-slide {
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   overflow: hidden;
   transition-property: transform, opacity, height;
@@ -753,6 +769,7 @@ button.swiper-pagination-bullet {
 
 .swiper-cards .swiper-slide {
   transform-origin: center bottom;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   overflow: hidden;
 }
@@ -793,13 +810,16 @@ button.swiper-pagination-bullet {
   background-color: #232215;
 }
 .p-hambager-content.is-ham-open .p-hambager .c-line:first-of-type {
-  animation: line1-open var(--navTransition) forwards;
+  -webkit-animation: line1-open var(--navTransition) forwards;
+          animation: line1-open var(--navTransition) forwards;
 }
 .p-hambager-content.is-ham-open .p-hambager .c-line:nth-of-type(2) {
-  animation: line2-open var(--navTransition) forwards;
+  -webkit-animation: line2-open var(--navTransition) forwards;
+          animation: line2-open var(--navTransition) forwards;
 }
 .p-hambager-content.is-ham-open .p-hambager .c-line:last-of-type {
-  animation: line3-open var(--navTransition) forwards;
+  -webkit-animation: line3-open var(--navTransition) forwards;
+          animation: line3-open var(--navTransition) forwards;
 }
 
 :root {
@@ -829,15 +849,18 @@ button.swiper-pagination-bullet {
 }
 .p-hambager .c-line:first-of-type {
   top: 0;
-  animation: line1 var(--navTransition) forwards;
+  -webkit-animation: line1 var(--navTransition) forwards;
+          animation: line1 var(--navTransition) forwards;
 }
 .p-hambager .c-line:nth-of-type(2) {
   top: 50%;
-  animation: line2 var(--navTransition) forwards;
+  -webkit-animation: line2 var(--navTransition) forwards;
+          animation: line2 var(--navTransition) forwards;
 }
 .p-hambager .c-line:last-of-type {
   top: 100%;
-  animation: line3 var(--navTransition) forwards;
+  -webkit-animation: line3 var(--navTransition) forwards;
+          animation: line3 var(--navTransition) forwards;
 }
 
 .c-ham-txt {
@@ -849,6 +872,21 @@ button.swiper-pagination-bullet {
   .c-ham-txt {
     font-size: 1.3rem;
     margin-top: 0.5rem;
+  }
+}
+
+@-webkit-keyframes line1 {
+  0% {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(0);
+    top: 50%;
+  }
+  100% {
+    transform: rotate(0);
+    top: 0;
   }
 }
 
@@ -866,6 +904,20 @@ button.swiper-pagination-bullet {
     top: 0;
   }
 }
+@-webkit-keyframes line1-open {
+  0% {
+    transform: rotate(0);
+    top: 0;
+  }
+  50% {
+    transform: rotate(0);
+    top: 50%;
+  }
+  100% {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+}
 @keyframes line1-open {
   0% {
     transform: rotate(0);
@@ -880,6 +932,17 @@ button.swiper-pagination-bullet {
     transform: rotate(45deg);
   }
 }
+@-webkit-keyframes line2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes line2 {
   0% {
     opacity: 0;
@@ -891,6 +954,17 @@ button.swiper-pagination-bullet {
     opacity: 1;
   }
 }
+@-webkit-keyframes line2-open {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 @keyframes line2-open {
   0% {
     opacity: 1;
@@ -900,6 +974,20 @@ button.swiper-pagination-bullet {
   }
   100% {
     opacity: 0;
+  }
+}
+@-webkit-keyframes line3 {
+  0% {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(0);
+    top: 50%;
+  }
+  100% {
+    transform: rotate(0);
+    top: 100%;
   }
 }
 @keyframes line3 {
@@ -914,6 +1002,20 @@ button.swiper-pagination-bullet {
   100% {
     transform: rotate(0);
     top: 100%;
+  }
+}
+@-webkit-keyframes line3-open {
+  0% {
+    transform: rotate(0);
+    top: 100%;
+  }
+  50% {
+    transform: rotate(0);
+    top: 50%;
+  }
+  100% {
+    top: 50%;
+    transform: rotate(-45deg);
   }
 }
 @keyframes line3-open {
@@ -3022,7 +3124,7 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767.98px) {
   .p-company__detail dt,
-  .p-company__detail dd {
+.p-company__detail dd {
     border-bottom: 1px solid #b1b2ad;
     padding: 1rem 0;
   }
@@ -4174,6 +4276,8 @@ button.swiper-pagination-bullet {
   display: inline;
   width: 8.1rem;
   margin-left: 1.5rem;
+  transform-origin: center;
+  transition: transform 0.5s ease-in-out;
 }
 @media screen and (max-width: 767.98px) {
   .p-icn-link {
@@ -4181,12 +4285,8 @@ button.swiper-pagination-bullet {
   }
 }
 
-a .p-icn-link {
-  transform-origin: center;
-  transition: transform 0.3s ease-in-out;
-}
-a:hover .p-icn-link {
-  transform: translateX(15%);
+.p-icn-link:hover {
+  transform: rotate(360deg);
 }
 
 #c-icn-link .st0 {
@@ -4441,4 +4541,5 @@ a.pagination__item:hover::after {
   .u-pc-align--center {
     text-align: center;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,201 @@
+@use "../foundation/setting" as *;
+@use "../foundation/mixin" as *;
+/* ----------------------------------------------------------------------------------------------------
+*	店舗一覧
+* --------------------------------------------------------------------------------------------------*/
+.p-shop {
+  @include mq(m) {
+    position: relative;
+    &::before {
+      position: fixed;
+      content: "";
+      width: 100%;
+      height: 100vh;
+      background-image: url(#{$imgPath}common/bg_under01.png);
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+  }
+}
+.p-shop-iegyu-content {
+  .p-ttl-wrapper {
+    h2 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 4rem;
+      @include mq(m) {
+        font-size: 2.3rem;
+        margin-bottom: 3.4rem;
+      }
+    }
+  }
+  p {
+    width: 750px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2.2;
+    @include mq(m) {
+      width: 100%;
+      font-size: 1.4rem;
+      line-height: 2.2;
+      text-align: left;
+		}
+    &:first-of-type {
+      @include mq(m) {
+        display: none;
+      }
+    }
+  }
+  .sp_block {
+    display: none;
+    @include mq(m) {
+      display: block;
+    }
+  }
+}
+.shoplist_box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rem;
+  @include mq(m) {
+    display: block;
+    margin-bottom: 15rem;
+  }
+  &:last-of-type {
+    margin-bottom: 35rem;
+    @include mq(m) {
+      margin-bottom: 20rem;
+    }
+  }
+  .shop-name {
+    margin-bottom: 2rem;
+    h3 {
+      // font-size: 2.6rem;
+      font-size: 2rem;
+      font-weight: 400;
+      margin-right: 2rem;
+      margin-bottom: 2rem;
+    }
+    div {
+      display: flex;
+      margin-bottom: 3.8rem;
+      p {
+        font-size: 1.5rem;
+        line-height: 1;
+        padding: 6px 25px;
+        border: 1px solid #707070;
+        margin-right: 1.2rem;
+      }
+    }
+  }
+  .rights {
+    position: relative;
+    width: 50%;
+    margin-right: 60px;
+    @include mq(m) {
+      width: 100%;
+      margin-bottom: 1.3rem;
+    }
+    .main_img {
+      width: 100%;
+      margin-bottom: 6rem;
+      @include mq(m) {
+        margin-bottom: 3.8rem;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      li {
+        width: calc((100% / 3) - 8px);
+        img {
+          width: 100%;
+        }
+      }
+      &:after {
+        content: "";
+        width: calc((100% / 3) - 8px);
+        height: 0;
+      }
+    }
+    .main_img_bg {
+      position: absolute;
+      top: -13px;
+      left: -13px;
+      width: 100%;
+      z-index: -1;
+      width: 105%;
+      @include mq(m) {
+        left: -8px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .left {
+    width: 50%;
+    @include mq(m) {
+      width: 100%;
+    }
+    .shop-name {
+      display: flex;
+      align-items: center;
+      @include mq(m) {
+        display: none;
+      }
+      h3 {
+        font-size: 2.6rem;
+        margin-bottom: 0;
+      }
+      p {
+        font-size: 1.5rem;
+        line-height: 1;
+        padding: 6px 25px;
+        border: 1px solid #707070;
+        margin-right: 1.2rem;
+      }
+    }
+    table {
+      font-size: 1.5rem;
+      border-collapse:collapse;
+      @include mq(m) {
+        font-size: 1.4rem;
+      }
+      tr {
+        border-bottom: 1px solid #707070;
+        th {
+          display: flex;
+          font-weight: normal;
+          height: 100%;
+          padding:1.7rem 0 1.7rem 3rem;
+          @include mq(m) {
+            padding:1.7rem 0;
+            line-height: 1.7;
+          }
+        }
+        td {
+          padding:1.7rem 0 1.7rem 3rem;
+          @include mq(m) {
+            padding:1.7rem 0 1.7rem 1.7rem;
+            line-height: 1.7;
+          }
+          br {
+            content: "";
+            display: block;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+/* ----------------------------------------------------------------------------------------------------
+*	店舗写真サムネ・メイン切り替え
+* --------------------------------------------------------------------------------------------------*/

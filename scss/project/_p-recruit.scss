@@ -1,0 +1,70 @@
+@use "../foundation/setting" as *;
+@use "../foundation/mixin" as *;
+/* ----------------------------------------------------------------------------------------------------
+*	採用情報
+* --------------------------------------------------------------------------------------------------*/
+.p-recruit {
+  @include mq(m) {
+    position: relative;
+    &::before {
+      position: fixed;
+      content: "";
+      width: 100%;
+      height: 100vh;
+      background-image: url(#{$imgPath}common/bg_under01.png);
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+  }
+  .p-recruit-iegyu {
+    .p-recruit-content {
+      padding-bottom: 8.4rem;
+      @include mq(m) {
+        padding-bottom: 3rem;
+      }
+      .head_text {
+        margin-bottom: 14.2rem;
+        @include mq(m) {
+          margin-bottom: 8rem;
+        }
+        p {
+          font-size: 2rem;
+          text-align: center;
+          @include mq(m) {
+            font-size: 1.6rem;
+            letter-spacing: 0;
+            font-weight: 600;
+          }
+        }
+      }
+      .p-recruit-box {
+        margin-bottom: 8.2rem;
+        @include mq(m) {
+          margin-bottom: 7rem;
+        }
+        p {
+          &:first-of-type {
+            font-size: 2.6rem;
+            margin-bottom: 3.5rem;
+            @include mq(m) {
+              font-size: 2rem;
+              margin-bottom: 2.6rem;
+            }
+          }
+          &:nth-of-type(2) {
+            font-size: 1.5rem;
+            br {
+              content: "";
+              display: block;
+              margin-bottom: 1rem;
+              @include mq(m) {
+                margin-bottom: 0.5rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

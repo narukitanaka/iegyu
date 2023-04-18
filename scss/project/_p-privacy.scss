@@ -1,0 +1,81 @@
+@use "../foundation/setting" as *;
+@use "../foundation/mixin" as *;
+/* ----------------------------------------------------------------------------------------------------
+*	プライバシーポリシー
+* --------------------------------------------------------------------------------------------------*/
+.p-privacy {
+  @include mq(m) {
+    position: relative;
+    &::before {
+      position: fixed;
+      content: "";
+      width: 100%;
+      height: 100vh;
+      background-image: url(#{$imgPath}common/bg_under01.png);
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+  }
+  .p-privacy-iegyu {
+    .p-privacy-content {
+      padding-bottom: 9rem;
+      @include mq(m) {
+        padding-bottom: 5rem;
+      }
+      .p-privacy-box {
+        margin-bottom: 6rem;
+        @include mq(m) {
+          margin-bottom: 5rem;
+        }
+        &:first-of-type {
+          p {
+            &:first-of-type {
+              @include mq(m) {
+                font-size: 2rem;
+              }
+            }
+          }
+        }
+         p {
+          &:first-of-type {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            @include mq(m) {
+              font-size: 1.6rem;
+            }
+          }
+          &:nth-of-type(2) {
+            font-size: 1.5rem;
+            line-height: 2.2;
+            @include mq(m) {
+              font-size: 1.4rem;
+              line-height: 2;
+            }
+            br {
+              content: "";
+              display: block;
+              margin-bottom: 10px;
+              @include mq(m) {
+                margin-bottom: 0;
+              }
+            }
+            span {
+              display: block;
+              margin-bottom: 4rem;
+              @include mq(m) {
+                margin-bottom: 3.5rem;
+              }
+            }
+            a {
+              &:hover {
+                color: #00f;
+              }
+            }
+          }
+         }
+      }
+    }
+  }
+}

@@ -7,6 +7,9 @@
 		padding: 4rem 0 3rem;
 	}
 	.p-section__ttl {
+    @include mq(m) {
+			font-size: 2.5rem;
+		}
 		.c-en {
 			@include mq(m) {
 				font-size: 1.1rem;
